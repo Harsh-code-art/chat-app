@@ -4,6 +4,7 @@ const { app, server } = require("./socket/socket");
 require("dotenv").config();
 require("./src/database/config");
 
+
 const auth = require("./src/routes/UserRoute");
 const message = require("./src/routes/messages");
 const usersrouter = require("./src/routes/getroute");
@@ -26,7 +27,8 @@ app.use("/api/message", message);
 app.use("/api/user", usersrouter);
 // const __dirnames = path.resolve();
 
-app.use(express.static(path.join(__dirnames, "frontend", "dist")));
+// app.use(express.static(path.join(__dirnames, "frontend", "dist")));
+app.use(express.static(path.join(__dirnames, "'../frontend/dist'")));
 
 app.use((req, res) => {
   res.sendFile(path.join(__dirnames, "frontend", "dist", "index.html"));
