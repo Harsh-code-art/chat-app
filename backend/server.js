@@ -25,13 +25,14 @@ app.use(
 app.use("/api", auth);
 app.use("/api/message", message);
 app.use("/api/user", usersrouter);
+// require()
 // const __dirnames = path.resolve();
 
 // app.use(express.static(path.join(__dirnames, "frontend", "dist")));
 app.use(express.static(path.join(__dirnames, "'../frontend/dist'")));
 
 app.use((req, res) => {
-  res.sendFile(path.join(__dirnames, "frontend", "dist", "index.html"));
+  res.sendFile(path.join(__dirnames,'../frontend/dist/index.html'));
 });
 
 const port = process.env.port || 4000;
