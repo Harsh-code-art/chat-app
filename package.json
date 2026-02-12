@@ -1,0 +1,22 @@
+{
+  "name": "react_website",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Harsh-code-art/chat-app#readme",
+  "bugs": {
+    "url": "https://github.com/Harsh-code-art/chat-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harsh-code-art/chat-app.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+     "dev":"nodemon backend/server.js",
+    "start": "node backend/server.js",
+    "build":"npm install && npm install --prefix frontend && npm run build --prefix frontend"
+  }
+}
